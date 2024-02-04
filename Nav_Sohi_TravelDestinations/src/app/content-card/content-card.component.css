@@ -1,0 +1,33 @@
+/* content-card.component.css */
+
+.card-container {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card-content {
+  /* Add your styles for content positioning and padding */
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card-description,
+.card-creator,
+.card-type,
+.card-tags {
+  margin-top: 5px;
+}
+
+/* Add more styles as needed */

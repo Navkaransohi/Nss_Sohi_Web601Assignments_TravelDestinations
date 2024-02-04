@@ -1,0 +1,16 @@
+<!-- content-list.component.html -->
+
+<div>
+    <h2>Content List</h2>
+    <ul>
+      <li *ngFor="let contentItem of contentList">
+        <h3>{{ contentItem.title }}</h3>
+        <p>{{ contentItem.description }}</p>
+        <p>Creator: {{ contentItem.creator }}</p>
+        <img *ngIf="contentItem.imgURL" [src]="contentItem.imgURL" alt="Image">
+        <p>Type: {{ contentItem.type }}</p>
+        <p>Tags: {{ contentItem.tags?.join(', ') || 'N/A' }}</p>
+      </li>
+    </ul>
+  </div>
+  

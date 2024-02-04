@@ -1,0 +1,10 @@
+<!-- content-card.component.html -->
+
+<div *ngIf="contentItem" class="card-container">
+  <div>
+    <h2 class="card-title">{{ contentItem.title }}</h2>
+    <p class="card-description">{{ contentItem.description }}</p>
+    <p class="card-creator">Creator: {{ contentItem.creator }}</p>
+    <img *ngIf="contentItem.imgURL" [src]="contentItem.imgURL" alt="Image" class="card-image">
+  </div>
+</div>
