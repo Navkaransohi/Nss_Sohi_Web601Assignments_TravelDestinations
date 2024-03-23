@@ -1,0 +1,15 @@
+<!-- content-card.component.html -->
+
+<div class="content-card" [ngClass]="getCardTypeClass(contentItem?.type)" (click)="handleClick()">
+  <div>
+    <h2 class="card-title">{{ contentItem?.title }}</h2>
+    <p class="card-description">{{ contentItem?.description }}</p>
+    <p class="card-creator">Creator: {{ contentItem?.creator }}</p>
+     <p class="card-type" appHoverAffect>{{ contentItem?.type }}</p>
+    <img *ngIf="contentItem?.imgURL" [src]="contentItem?.imgURL" alt="Image" class="card-image">
+    <img *ngIf="contentItem?.imgURL; else defaultImage" [src]="contentItem?.imgURL" alt="Image" class="card-image">
+    <ng-template #defaultImage>
+      <img src="assets/images/default-image.jpg" alt="Default Image" class="card-image">
+    </ng-template>
+  </div>
+</div>

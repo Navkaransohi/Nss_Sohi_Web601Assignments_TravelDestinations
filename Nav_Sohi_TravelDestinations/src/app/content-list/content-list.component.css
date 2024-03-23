@@ -1,0 +1,20 @@
+/* content-list.component.css */
+
+/* Add your component-specific styles here */
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .first-card {
+    border: 2px solid black;
+  }
+  .content-imag{
+    width:200px;
+    height:auto;
+  }

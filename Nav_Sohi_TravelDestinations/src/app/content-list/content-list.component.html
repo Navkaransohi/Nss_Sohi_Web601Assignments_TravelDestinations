@@ -1,0 +1,37 @@
+<!-- content-list.component.html -->
+
+<!-- Display Content with no type set -->
+<div>
+  <app-create-content (contentAdded)="onContentAdded($event)"></app-create-content>
+  <h2>Search for Content by Title</h2>
+  <input type="text" [(ngModel)]="searchTitle" placeholder="Enter title...">
+  <button (click)="searchContent()">Search</button>
+
+  <div *ngIf="searchMessage" [ngStyle]="{'color': searchMessageColor}">
+    {{ searchMessage }}
+  </div>
+
+  <div>
+    <h2>Content with No Type</h2>
+    <div *ngFor="let contentItem of contentList | contentFilter">
+      <app-content-card [contentItem]="contentItem"></app-content-card>
+    </div>
+  </div>
+
+ <!-- Display Content with type 'Adventure' -->
+ <div>
+  <h2>Adventure Content</h2>
+  <div *ngFor="let contentItem of contentList | contentFilter:'Adventure'">
+    <app-content-card [contentItem]="contentItem"></app-content-card>
+  </div>
+</div>
+
+ <!-- Display Content with type 'Nature' -->
+ <div>
+  <h2>Nature Content</h2>
+  <div *ngFor="let contentItem of contentList | contentFilter:'Nature'">
+    <app-content-card [contentItem]="contentItem"></app-content-card>
+  </div>
+</div>
+</div>
+
