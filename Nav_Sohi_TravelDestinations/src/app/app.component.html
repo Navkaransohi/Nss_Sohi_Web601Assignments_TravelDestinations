@@ -1,0 +1,15 @@
+<!-- app.component.html -->
+
+<div class="container">
+    <div class="content-card" *ngIf="contentItem$ | async as contentItem">
+      <h2>{{ contentItem.title }}</h2>
+      <p>{{ contentItem.description }}</p>
+      <p>Creator: {{ contentItem.creator }}</p>
+      <!-- Only display Date if available -->
+      <p *ngIf="contentItem.date">Date: {{ contentItem.date }}</p>
+      <!-- Display Image if available -->
+      <img *ngIf="contentItem.imgURL" [src]="contentItem.imgURL" alt="{{ contentItem.title }}" class="content-img">
+    </div>
+</div>
+
+

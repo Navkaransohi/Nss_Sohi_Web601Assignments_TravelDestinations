@@ -1,0 +1,16 @@
+/* app-messages.component.css */
+
+.messages {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .message {
+    margin-bottom: 5px;
+  }
+  
